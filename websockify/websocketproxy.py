@@ -75,7 +75,7 @@ Traffic Legend:
 
         try:
             self.server.auth_plugin.authenticate(
-                headers=self.headers, target_host=self.server.target_host,
+                headers=self.headers, query=self.path,target_host=self.server.target_host,
                 target_port=self.server.target_port)
         except auth.AuthenticationError:
             ex = sys.exc_info()[1]
